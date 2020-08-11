@@ -1,6 +1,3 @@
-console.log("client side javascript");
-
-
 const weatherForm = document.querySelector('form');
 const inputElement = document.querySelector('input');
 const loadingOrErrorMessage = document.querySelector('#loadingOrError');
@@ -28,7 +25,7 @@ weatherForm.addEventListener("submit",(e)=>{
 
 const fetcher = (location)=>{
 
-    const url = "http://localhost:3000/weather?address=" + location;
+    const url = "/weather?address=" + location;
 
     fetch(url).then((response)=>{
         response.json().then((data)=>{
